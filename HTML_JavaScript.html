@@ -1,0 +1,41 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+<script language='javascript'>
+function clicou(){
+		document.getElementById("box").innerHTML='<input type="text" value="Cliquei no botão" name="textBox1">';
+	}
+
+function ifDivClear(){
+		var divBox = document.getElementById('box');
+
+			if(divBox.style.visibility == 'visible') {
+				divBox.style.visibility='hidden';
+			}else{
+				clicou();
+				divBox.style.visibility='visible';
+			}
+	}
+	
+function cores(){
+if(document.body.style.backgroundColor  == 'red') {
+				document.body.style.backgroundColor = 'white';
+			}else{
+				document.body.style.backgroundColor = 'red';
+			}
+}
+
+</script>
+
+<title>Teste JS</title>
+</head>
+<body>
+
+<input type="button" value="Botão 1" onclick="clicou()"/>
+<input type="button" value="botão 2" onclick="ifDivClear()"/>
+<input type="button" value="Botão 3" onclick="cores()"/>
+<br/><br/>
+<div id="box" class="container" style="visibility: visible;">
+</div>
+</body>
+</html>
